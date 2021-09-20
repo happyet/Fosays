@@ -1,0 +1,591 @@
+/* ------------------------------------
+ * Typecho Default Theme
+ *
+ * @author  Typecho Team
+ * @link  http: //typecho.org/
+ * @update  2013-10-28
+ * --------------------------------- */
+
+/* ------------------
+ * Global style
+ * --------------- */
+body {
+  color: #444;
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: "Droid Serif", Georgia, "Times New Roman", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "WenQuanYi Micro Hei","Microsoft Yahei", serif;
+  font-size: 87.5%;
+  background: #efefef url('img/fosays.jpg') no-repeat 0 0;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+}
+a:hover, a:active {
+  opacity: 0.8;
+}
+pre, code { 
+  background: #F3F3F3;
+  font-family: Menlo, Monaco, Consolas, "Lucida Console", "Courier New", monospace;
+  font-size: .92857em;
+}
+code { padding: 2px 4px; color: #B94A48; }
+pre {
+  padding: 8px;
+  overflow: auto;
+  max-height: 400px;
+  line-height: 1.5;
+}
+pre code {
+  padding: 3px;
+  color: #444;
+}
+
+blockquote {
+  margin: 1em 0;
+  padding-left: 1.5em;
+  border-left: 4px solid #eee;
+  color: #666;
+}
+blockquote cite {
+  display: block;
+  text-align: right;
+}
+table {
+  border: 1px solid #ddd;
+  width: 100%;
+  border-spacing: 0;
+}
+table th,
+table td {
+  padding: 5px 10px;
+  border: 1px solid #eee;
+}
+table th {
+  background: #f3f3f3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei","Microsoft Yahei", sans-serif;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+textarea {
+  padding: 5px;
+  border: 1px solid #E9E9E9;
+  width: 100%;
+
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+textarea {
+  resize: vertical;
+}
+
+.container{
+  width:100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Special link style */
+.browsehappy {
+  padding: 8px 0;
+  background: #FBE3E4;
+  color: #8A1F11;
+  text-align: center;
+}
+.browsehappy a {
+  color: #8A1F11;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* ------------------
+ * Header
+ * --------------- */
+
+#header {
+  text-align: center;
+  padding: 80px 0 60px;
+}
+.site-logo img {
+  max-height: 64px;
+  border-width: 10px solid rgba(61,61,61,0.6);
+  border-radius: 50%;
+}
+.site-name {
+  display: inline-block;
+  color: rgba(255,255,255,0.8);
+  padding: 10px 30px;
+  background: rgba(61,61,61,0.6);
+  border-radius: 5px;
+}
+.description {
+  display: inline-block;
+  margin: .5em 0 0;
+  color: rgba(255,255,255,0.5);
+  padding: 5px 30px;
+  background: rgba(61,61,61,0.6);
+  border-radius: 5px;
+}
+
+/* Navigation menu */
+#nav-menu {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  background: rgba(255,255,255,0.6);
+}
+#nav-menu ul {
+  margin: 0 0 0 auto;
+  padding: 0;
+  list-style: none;
+}
+#nav-menu li {
+  display: inline-block;
+  vertical-align: middle;
+}
+#nav-menu a {
+  display: block;
+  padding: 5px;
+  color: #666;
+}
+#nav-menu .current {
+  color: #555;
+}
+#nav-menu li.search-toggle a{
+  padding: 0 0 0 10px;
+  line-height: 1;
+}
+/* Search */
+.site-search {
+  display: none;
+  margin: 10px 20px;
+}
+#search {
+  position: relative;
+}
+#search input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #999;
+  outline: none;
+}
+#search button {
+  position: absolute;
+  right: 4px;
+  top: 2px;
+  border: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background: transparent url(img/icon-search.png) no-repeat center center;
+  direction: ltr; /* fix RTL language */
+  text-indent: -9999em;
+  cursor: pointer;
+}
+
+/* ------------------
+ * Main
+ * --------------- */
+#main {
+  padding-top: 20px;
+  background: linear-gradient(to bottom,rgba(255,255,255,0.5), #efefef 520px);
+}
+#site-notes ul {
+  margin: 0;
+  padding: 0 0 10px 40px;
+
+}
+#site-notes li {
+  margin: 0 0 10px;
+}
+.post {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #EEE;
+  background: rgba(255,255,255,0.8);
+}
+.post-title {
+  margin: .83em 0;
+  font-size: 24px;
+}
+.post-title a {
+  color: #555;
+}
+.post-meta {
+  margin-top: -0.5em;
+  padding: 0;
+  color: #999;
+  font-size: .92857em;
+}
+.post-meta li {
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 30px;
+}
+.post-meta li:first-child {
+  margin-left: 0;
+}
+.post-meta li:last-child {
+  margin-right: 0;
+}
+.post-meta .avatar {
+  float: left;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+.post-content {
+  text-align: left;
+  line-height: 2;
+}
+.post-content > * {
+  max-width: 100%;
+}
+.post-content p {
+  margin: 20px 0;
+}
+.post-content a {
+  text-decoration: underline;
+}
+.post-footer {
+  color: #999;
+  font-style: italic;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.post-footer a {
+  font-size: 12px;
+  position: relative;
+  color: #999;
+  margin-right: 5px;
+  padding-left: 10px;
+}
+.post-footer a::before {
+  content: '#';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.post-near {
+  list-style: none;
+  margin: 20px 0;
+  padding: 10px 20px;
+  color: #999;
+  background: rgba(255,255,255,0.8);
+}
+.post-near li {
+  margin: 10px 0;
+}
+
+.archive-title {
+  margin: 0;
+  padding: 0 20px 20px;
+  color: #666;
+  font-size: 1em;
+}
+.more {
+  text-align: center;
+}
+.more a {
+  border: none;
+}
+.protected .text {
+  width: 50%;
+}
+
+/* Page nav */
+
+.page-navigator {
+  list-style: none;
+  margin: 25px 0;
+  padding: 0;
+  text-align: center;
+}
+.page-navigator li {
+  display: inline-block;
+  margin: 0 4px;
+}
+.page-navigator a {
+  display: inline-block;
+  padding: 0 10px;
+  height: 30px;
+  line-height: 30px;
+}
+.page-navigator a:hover {
+  background: #EEE;
+  text-decoration: none;
+}
+
+.page-navigator .current a {
+  color: #444;
+  background: #EEE;
+}
+
+/* ------------------
+ * Comment list
+ * --------------- */
+#comments {
+  padding: 20px;
+  background: rgba(255,255,255,0.8);
+}
+.comment-list, .comment-list ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.comment-list li {
+  padding: 14px;
+  margin-top: 10px;
+  border: 1px solid #EEE;
+}
+.comment-list li.comment-level-odd {
+  background: #F6F6F3;
+}
+.comment-list li.comment-level-even {
+  background: #FFF;
+}
+.comment-list li.comment-by-author {
+  background: #FFF9E8;
+}
+.comment-list li .comment-reply {
+  text-align: right;
+  font-size: .92857em;
+}
+.comment-meta a {
+  color: #999;
+  font-size: .92857em;
+}
+.comment-author {
+  display: block;
+  margin-bottom: 3px;
+  color: #444;
+}
+.comment-author .avatar {
+  float: left;
+  margin-right: 10px;
+}
+.comment-author cite {
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Comment reply */
+.comment-list .respond {
+  margin-top: 15px;
+  border-top: 1px solid #EEE;
+}
+.respond .cancel-comment-reply {
+  float: right;
+  margin-top: 15px;
+  font-size: .92857em;
+}
+#comment-form label {
+  display: block;
+  margin-bottom: .5em;
+  font-weight: bold;
+}
+#comment-form .required:after {
+  content: " *";
+  color: #C00;
+}
+
+/* ------------------
+ * secondary
+ * --------------- */
+#secondary {
+  background: #fff;
+  word-wrap: break-word;
+}
+.widget {
+  width: 25%;
+  padding: 10px 20px;
+}
+.widget-list {
+  list-style: none;
+  padding: 0;
+}
+.widget-list li {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.widget-list li ul {
+  margin-left: 15px;
+}
+
+
+/* ------------------
+ * Footer 
+ * --------------- */
+#footer {
+  padding: 3em 0;
+  line-height: 1.5;
+  text-align: center;
+  color: #999;
+}
+.back-top {
+  display: none;
+  position: fixed;
+  font-size: 12px;
+  right: 10px;
+  bottom: 10%;
+  cursor: pointer;
+  padding: 10px;
+  background: rgba(255,255,255,0.5)
+}
+.back-top.back-top-show {
+  display: block;
+}
+/* -----------------
+ * Error page
+ * -------------- */
+.error-page {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+
+/* -----------------
+ * Content format
+ *--------------- */
+.post-content, .comment-content {
+  word-wrap: break-word;
+}
+.post-content h2, .comment-content h2 {
+  font-size: 1.28571em;
+}
+.post-content img, .comment-content img,
+.post-content video, .comment-content video {
+  max-width: 100%;
+  height: auto;
+}
+.post-content a img,
+.comment-content a img {
+  background: #FFF;
+  position: relative;
+  bottom: -4px;  /* hidden img parent link border  */
+}
+.post-content hr, .comment-content hr {
+  margin: 2em auto;
+  width: 100px;
+  border: 1px solid #E9E9E9;
+  border-width: 2px 0 0 0;
+}
+
+
+/* -----------------
+ * Misc
+ *--------------- */
+.aligncenter, div.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.alignleft {
+  float: left;
+}
+.alignright {
+  float: right;
+}
+img.alignleft {
+  margin: 5px 15px 0 0;
+}
+img.alignright {
+  margin: 5px 0 0 15px;
+}
+
+
+/* -----------------
+ * Responsive
+ *--------------- */
+@media (min-width: 761px) {
+  #header {
+    padding: 140px 0 140px;
+  }
+  #nav-menu .container {
+    display: flex;
+    align-items: center;
+  }
+  #nav-menu a {
+    padding: 10px;
+  }
+  #nav-menu li.search-toggle {
+    display: none;
+  }
+  .site-search {
+    display: block!important;
+    margin: 0 auto 0 10px;
+  }
+  .post, #comments {
+    padding: 20px 40px;
+  }
+  .post-near, #secondary {
+    display: flex;
+  }
+  .post-near li {
+    width: 50%;
+  }
+  .post-near a, .post-near span {
+    display: block;
+  }
+  .post-near li:last-child{
+    text-align: right;
+  }
+  .back-top {
+    right: 10%;
+  }
+}
+@media (min-width: 1681px) {
+  body {
+    background-size: contain;
+  }
+
+}
+
+
+/*
+* Hide from both screenreaders and browsers: h5bp.com/u
+*/
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+* Hide only visually, but have it available for screenreaders: h5bp.com/v
+*/
+.sr-only {
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+* Extends the .sr-only class to allow the element to be focusable
+* when navigated to via the keyboard: h5bp.com/p
+*/
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+* Hide visually and from screenreaders, but maintain layout
+*/
+.invisible {
+  visibility: hidden; }
